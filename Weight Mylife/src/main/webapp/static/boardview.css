@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body { 
+	margin: 0px;
+	font-family: 'Jeju Gothic', sans-serif;
+}
+header {
+	margin: auto;
+	height: 15vh;
+}
+header>ul {
+	width: 60%; margin: 30px auto;
+}
+section {
+	padding-bottom: 105px;
+	background-color: #f2f2f2;
+}
+footer {
+	width: 100%; 
+	height: 18vh; bottom: -30px; position: absolute;
+	background-color: #f2f2f2;
+}
+footer nav {
+	margin-top: -20px;
+}
+footer a {
+  display: inline-block;
+  margin: 20px 20px 10px 40px;
+  color: #808080; font-size: 11px;
+}
+footer a:nth-child(2) {
+	margin-left: 18px;
+}
+footer a:visited {
+  color: #808080;
+}
+footer p {
+  margin-top: 0; margin-bottom: 0;  
+}
+
+footer p span {
+  display: inline-block;
+  margin-left: 40px;
+}
+h1 {
+	margin-top: 30px;
+	text-align: center;
+}
+h1 a {
+	text-decoration: none;
+}
+span#f, span#c, span#l {
+	color: skyblue;
+}
+.main-logo {
+	position: absolute;
+	left: 20px;
+	top: 0px;
+	width: 10%; height: 15vh;
+}
+.main-join {
+	position: absolute;
+	top: 50px;
+	right: 20px;
+}
+.main-join a {
+	text-decoration: none;
+}
+#wrap {
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+.main-left {
+	position: absolute;
+	width: 14%;
+	top: 20%; left: 0.5%;
+}
+.main-left img {
+	width: 100%;
+	height: 60vh;
+}
+.main-ques {
+	width: 100%;
+	font-size: 15px;
+}
+
+.main-scroll {
+	display: inline-block;
+	width: 14%;
+	position: fixed;
+	font-size: 14px;
+	top: 40%; right: 0%;	
+}
+.main-scroll span:nth-child(1) {
+	font-weight: bold;
+}
+.main-scroll li{
+	white-space : nowrap;
+	text-overflow: ellipsis;
+}
+.viewJone {
+	width: 60%;
+	min-height: 100vh;
+	margin: 0 auto;
+}
+.viewJoneNumber {
+	float: right; 
+}
+.viewJoneImg {
+	width: 100%;
+}
+.viewJoneImg img {
+	width: 40%;
+}
+.viewJoneCon {
+	margin-top: 20px;
+	width: 70%;
+}
+.viewJoneBtn {
+	margin-top: 20px;
+}
+.viewDown {
+	margin-top: 20px;
+	width: 40%;
+}
+.mb5 {
+	width: 70%;
+}
+.d-flex {
+	width: 80%;
+}
+.ms-3 {
+	width: 100%;
+}
+#replyInsert {
+	margin-top: 10px;
+}
+.replyDate {
+	float: right;
+}
+.replyContent {
+	margin-top: 7px; margin-bottom: 7px;
+	width: 70%;
+}
+.form-control {
+	width: 100%;
+}

@@ -1,0 +1,117 @@
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+body {
+	margin: 0px;
+	background: #FAFAFA;
+	font-family: 'Jeju Gothic', sans-serif;
+}
+
+body:not(section){
+	background: #be93c5;
+	background: -webkit-linear-gradient(to right, #be93c5, #7bc6cc);
+	background: linear-gradient(to right, #be93c5, #7bc6cc);
+}
+
+section {
+	width: 500px;
+	height: 740px;
+	background: #abbaab;
+	background: -webkit-linear-gradient(to right, #abbaab, #ffffff);
+	background: linear-gradient(to right, #abbaab, #ffffff);
+	text-align: center;
+	margin: 10vh auto;
+	border: 2px solid gray;
+	border-radius: 5px;
+}
+
+form {
+	width: 55%;
+	height: 100%;
+	margin: auto;
+}
+
+.header {
+	font-size: 30px;
+	padding: 10px 0px;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.header span {
+	font-weight: bold;
+	color: skyblue;
+}
+
+input {
+	height: 30px;
+	width: 267px;
+}
+
+input[type=submit] {
+	width: 30%;
+	height: 40px;
+	padding: 0px;
+	margin-top: 10px;
+}
+
+input[type=button].cancle {
+	width: 30%;
+	height: 40px;
+	padding: 0px;
+	margin-top: 10px;
+}
+
+.rows {
+	width: 100%;
+	text-align: left;
+}
+
+.rows:not(.h) {
+	padding-bottom: 15px;
+}
+
+div.id {
+	text-align: left;
+}
+
+input[type=text].id {
+	width: 177px;
+}
+
+input[type=button].id {
+	width: 85px;
+	height: 36px;
+	margin-top: 2px;
+	margin-bottom: 0px;
+}
+
+input[type=radio] {
+	width: 30px;
+	height: inherit;
+}
+
+#phone1 {
+	width: 80px;
+	height: 35px;
+}
+
+#phone2, #phone3 {
+	width: 80px;
+	height: 30px;
+}
+
+.red {
+	color: red;
+}
+
+.check {
+	display: none;
+	margin: 10px;
+	position: absolute;
+	height: 30px;
+	font-size: 9pt;
+}
+input[type=text]#email1, input[type=text]#email2 {
+	width: 110px;
+}
