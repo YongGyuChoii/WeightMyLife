@@ -91,6 +91,7 @@ span#f, span#c, span#l {
 }
 .pagingArea{
 	margin-left: 44%; margin-top: 10px;
+	min-height: 10vh;
 }
 .form-select {
 	width: 10%; display: inline-block;
@@ -130,4 +131,5 @@ span#f, span#c, span#l {
 .main-scroll li{
 	white-space : nowrap;
 	text-overflow: ellipsis;
+	overflow: hidden;
 }

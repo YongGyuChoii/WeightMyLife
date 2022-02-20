@@ -122,6 +122,7 @@ input[type=text]{
 .main-scroll li{
 	white-space : nowrap;
 	text-overflow: ellipsis;
+	overflow: hidden;
 }
 #memberTable {
   border-collapse: separate;

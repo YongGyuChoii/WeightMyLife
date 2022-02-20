@@ -126,5 +126,6 @@ span#f, span#c, span#l {
 }
 .main-scroll li{
 	white-space : nowrap;
+	overflow: hidden;
 	text-overflow: ellipsis;
 }

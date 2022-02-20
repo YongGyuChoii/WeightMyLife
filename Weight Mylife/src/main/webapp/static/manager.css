@@ -79,9 +79,10 @@ span#f, span#c, span#l {
 .cards {
 	width:60%; 
 	margin: 0 auto;
+	min-height: 110vh;
 }
 #cards {
-	min-height: 50vh; 
+	min-height: 70vh; 
 }
 .card-title {
 	text-align: center;
@@ -128,6 +129,7 @@ input[type=text]{
 .main-scroll li{
 	white-space : nowrap;
 	text-overflow: ellipsis;
+	overflow: hidden;
 }
 #memberTable {
   border-collapse: separate;

@@ -43,23 +43,25 @@
 			lList.add(live);
 		}
 		
+		
 		sql = "";
+		//board 테이블 count값 가져오기
 		sql = "select count(*) as total from board ";
-		if(searchValue != null && !searchValue.equals("") && !searchValue.equals("null")){
-			if(searchType.equals("fsubcon")){
+		if(searchValue != null && !searchValue.equals("") && !searchValue.equals("null")){     //검색값이 null값이 아닐때
+			if(searchType.equals("fsubcon")){                    //검색타입이 제목+내용
 				sql += " where (subject like '%"+searchValue+"%' or content like '%"+searchValue+"%') and boardtype='free'";
-			}else if(searchType.equals("fwriter")){
+			}else if(searchType.equals("fwriter")){              //검색타입이 작성자
 				sql += " where writer like '%"+searchValue+"%' and boardtype='free'";
 			}
-		}else if(viewType != null){
-			if(viewType.equals("flikey")){
+		}else if(viewType != null){              //정렬 타입이 null값이 아닐때
+			if(viewType.equals("flikey")){		//추천순 정렬
 				sql += " where boardtype='free' order by likey desc";
-			}else if(viewType.equals("fview")){
+			}else if(viewType.equals("fview")){			//조회순 정렬
 				sql += " where boardtype='free' order by viewcnt desc";
 			}else{
 				sql += " where boardtype='free' order by bidx desc";
 			}
-		}else {
+		}else {								//검색필터가 아닐때
 			sql += " where boardtype='free' order by bidx desc";
 		}
 		
@@ -71,13 +73,13 @@
 		if(rs.next()){
 			total = rs.getInt("total");
 		}
-		
+		//토탈값을 가져와서 페이징 처리하는 부분
 		paging = new PagingUtil(total,nowPageI,10);
-		
+		// board의 rownum 매기기
 		sql = " select * from ";
 		sql += " (select rownum r,b.* from ";
 		sql += " (select * from board ";
-		
+		//위와 동일
 		if(searchValue != null && !searchValue.equals("") && !searchValue.equals("null")){
 			if(searchType.equals("fsubcon")){
 				sql += " where (subject like '%"+searchValue+"%' or content like '%"+searchValue+"%') and boardtype='free' order by bidx desc) b)";
@@ -97,7 +99,7 @@
 		}else {
 			sql += " where boardtype='free' order by bidx desc) b)";
 		}
-		
+		//페이징 처리
 		sql += " where r >= "+paging.getStart()+" and r <= "+paging.getEnd();
 		
 		psmt = conn.prepareStatement(sql);
